@@ -2,7 +2,6 @@ const express = require('express'); //aqui importa os módulos da pasta express 
 
 const routes = require("./routes");
 
-
 const app = express(); //aqui faz a execução do express
 app.use(express.json()); //informa que o conteúdo vai ser no formato JSON
 
