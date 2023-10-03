@@ -1,4 +1,5 @@
 require("express-async-errors");
+require("dotenv/config");
 const migrationsRun = require("./database/sqlite/migrations")
 const AppError = require("./utils/AppError");
 const express = require('express'); //aqui importa os módulos da pasta express em node_modules
@@ -32,5 +33,5 @@ app.use((error, request, response, next) =>{
     });
 });
 
-const PORT = 3333; //porta de acesso ao servidor
+const PORT = process.env.PORT || 3333; //porta de acesso ao servidor
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`)); //faz a impressão dessa mensagem no console
