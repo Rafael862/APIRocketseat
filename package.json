@@ -7,7 +7,7 @@
     "start": "pm2-runtime start ecosystem.config.js --env production",
     "migrate": "knex migrate:latest",
     "dev": "nodemon ./src/server.js"
-  },
+  }, 
   "author": "Rafael Ferreira",
   "license": "ISC",
   "dependencies": {
